@@ -20,6 +20,15 @@ namespace GoogleCalendarAppointment
 
         static void Main(string[] args)
         {
+
+            /*
+             TODO's:
+            - Refactor Classes
+            - Remove Full filepaths
+            - Cleaner data parsing
+            - Null checks, mostly for data parsing
+             */
+
             CalendarService service = GetService();
             EventHelpper eventHelpper = new EventHelpper();
             RawData rawData = GetRawData();
