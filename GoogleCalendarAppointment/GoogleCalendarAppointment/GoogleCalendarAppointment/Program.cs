@@ -16,7 +16,9 @@ namespace GoogleCalendarAppointment
 {
     class Program
     {
-        static readonly string keyfilepath = @"C:\Users\Timi\source\repos\GoogleCalendarAppointment\GoogleCalendarAppointment\GoogleCalendarAppointment\GoogleCalendarAppointment\calendar-secret.json";
+        //static readonly string keyfilepath = @"C:\Users\Timi\source\repos\GoogleCalendarAppointment\GoogleCalendarAppointment\GoogleCalendarAppointment\GoogleCalendarAppointment\calendar-secret.json";
+        
+        static readonly string keyfilepath = Path.Combine(Environment.CurrentDirectory, "calendar-secret.json");
 
         static void Main(string[] args)
         {
