@@ -56,7 +56,7 @@ namespace GoogleCalendarAppointment
 
             foreach (var row in rows)
             {
-                if (string.IsNullOrEmpty(row) || string.IsNullOrWhiteSpace(row)) continue;
+                if (string.IsNullOrEmpty(row) || string.IsNullOrWhiteSpace(row) || row.Contains("kotona")) continue;
                 string temp = row.Replace(" ","");
 
                 string pv = string.Empty;
@@ -74,7 +74,7 @@ namespace GoogleCalendarAppointment
                 //7:30
                 vientiAika = temp.Substring(0, temp.IndexOf("-"));
                 //14:30
-                noutoAika = temp.Substring(temp.IndexOf("-") + 1, temp.Length - temp.IndexOf("(") - 2);
+                noutoAika = temp.Substring(temp.IndexOf("-") + 1, temp.IndexOf("(") - temp.IndexOf("-") - 1);
                 //Milka
                 noutaja = temp.Substring(temp.IndexOf("(") + 1, temp.Length - temp.IndexOf("(") - 2);
 
